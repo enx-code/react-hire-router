@@ -5,6 +5,7 @@ function Dashboard(props) {
   const { hiredPeople, setHirePeople, people, setPeople  } = props
 
   // const [people, setPeople] = useState([])
+  console.log("dashboard", people, hiredPeople)
 
   return (
     <main className="dashboard-layout">

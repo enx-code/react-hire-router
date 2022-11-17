@@ -24,7 +24,7 @@ export default function App() {
         <h1>Hire Your Team</h1>
         <nav>
           <ul>
-            <li>Dashboard</li>
+          <Link to="/">Dashboard</Link>
           </ul>
         </nav>
       </header>

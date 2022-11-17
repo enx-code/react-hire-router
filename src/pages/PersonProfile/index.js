@@ -5,7 +5,7 @@ import HireForm from "./components/HireForm";
 
 
 function PersonProfile(props) {
-  console.log("index", props)
+  console.log("index prop", props)
   const [person, setPerson] = useState(null);
   const location = useLocation();
 
@@ -13,7 +13,7 @@ function PersonProfile(props) {
     if (location.state) {
       const { person } = location.state;
       setPerson(person);
-      console.log(person);
+      console.log("persons info", person);
     }
   }, [location]);
 
