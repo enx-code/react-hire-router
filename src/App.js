@@ -32,11 +32,15 @@ export default function App() {
         <Route path="/"
           element={<Dashboard 
             hiredPeople={hiredPeople}
-            setHiredPeople={setHiredPeople}
-            setPeople={setPeople}
+            // setHiredPeople={setHiredPeople}
+            // setPeople={setPeople}
             people={people}/>}/>
         <Route
-        path="/view/:id" element={<PersonProfile />} />
+          path="/view/:id" 
+            element={<PersonProfile 
+            setHiredPeople={setHiredPeople}
+            hiredPeople={hiredPeople}/>} />
+        
       </Routes>
     </>
   )
