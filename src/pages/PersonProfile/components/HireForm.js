@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom"
 
 function HireForm(props) {
 
-  const { person, setPerson, hiredPeople, setHiredPeople, people, setPeople } = props;
+  const { person, hiredPeople, setHiredPeople } = props;
   const navigate = useNavigate()
   
   const [wage, setWage] = useState(0)

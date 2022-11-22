@@ -10,11 +10,10 @@ function PersonProfile(props) {
   const location = useLocation();
 
   useEffect(() => {
-    if (location.state) {
-      const { person } = location.state;
-      setPerson(person);
+    if (!location.state) return
+      const personData = location.state.person
+      setPerson(personData);
       console.log("persons info", person);
-    }
   }, [location]);
 
   if (!person) return <p>Loading...</p>
@@ -25,11 +24,8 @@ function PersonProfile(props) {
         {person.name.first} {person.name.last}
       </h2>
       <HireForm person={person} 
-      setPerson={setPerson}
       hiredPeople={hiredPeople}
-      setHiredPeople={setHiredPeople}
-      people={people}
-      setPeople={setPeople}  />
+      setHiredPeople={setHiredPeople} />
     </article>
   )
 }

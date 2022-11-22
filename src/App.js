@@ -4,6 +4,7 @@ import { Link } from "react-router-dom"
 import "./styles.css"
 import PersonProfile from "./pages/PersonProfile"
 import Dashboard from "./pages/Dashboard/index"
+import PersonProfileEdit from './pages/PersonProfile/components/PersonProfileEdit'
 
 const API_URL = "https://randomuser.me/api/?results=50"
 
@@ -36,11 +37,17 @@ export default function App() {
             // setPeople={setPeople}
             people={people}/>}/>
         <Route
-          path="/view/:id" 
+          path="/people/:id" 
             element={<PersonProfile 
             setHiredPeople={setHiredPeople}
             hiredPeople={hiredPeople}/>} />
-        
+            
+        <Route path='/people/:id/edit' element={
+          <PersonProfileEdit
+            setHiredPeople={setHiredPeople}
+            hiredPeople={hiredPeople}
+          />}
+        />
       </Routes>
     </>
   )
